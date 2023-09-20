@@ -122,7 +122,7 @@ h1{
 h2{
     width: calc(49.2vw + 149px);/*769px;*/
     margin-bottom: 90px;
-    font-size: 58px;
+    font-size: calc(2.7vw + 24px);/*58px;*/
     font-weight: 500;
     letter-spacing: 0.58px;
     text-transform: uppercase;
@@ -203,7 +203,7 @@ h2{
 .category{
     width: 420px;
     text-transform: uppercase;
-    font-size: 27px;
+    font-size: calc(1vw + 14px);   /*27px;*/
     font-weight: 600;
     margin-bottom: 20px;
 
@@ -212,10 +212,10 @@ h2{
 }
 
 p.scr2{
-    width: 450px;
+    width: calc(13.5vw + 277px);/*450px;*/
     margin-bottom: 52px;
     font-size: 27px;
-
+    font-size: calc(1vw + 14px);
     /*flex-grow: 0;
     flex-shrink: 1;*/
 }
@@ -225,6 +225,7 @@ p.scr2{
 /*---------- Экран3 ----------*/
 .purple {
     background: #6E3ABA;
+    background-size: 95% 100%;/*test*/
 }
 
 h3{
@@ -275,7 +276,7 @@ h3{
 /*---------- Экран5 ----------*/
 .scr5{
     width: calc(76.7vw + 40px);   /*1022px;*/
-    font-size: calc(2.65vw + 24);   /*58px;*/
+    font-size: calc(2.65vw + 24px);   /*58px;*/
     font-weight: 500;
     letter-spacing: 0.58px;
     text-transform: uppercase;
@@ -285,16 +286,18 @@ h3{
     display: flex;
     gap: 0 120px;
     margin-top: 52px;
+    flex-wrap: wrap;
 }
 
 .c1{
     width: 428px;
     /* height: 114px; */
+    font-size: calc(1vw + 14px);   /*27px;*/
 }
 
 .naim{
     line-height: 140%;
-    font-size: 27px;
+    /*font-size: 27px;*/
     font-weight: 600;
     line-height: 140%;
     text-transform: uppercase;
@@ -302,8 +305,9 @@ h3{
 }
 
 .tekst{
-    font-size: 27px;
+    /*font-size: 27px;*/
     line-height: 140%;
+    margin-bottom: 20px;
 }
 
 
@@ -322,7 +326,7 @@ h3{
     background-image: url('../img/frame.png');
     background-repeat: no-repeat;
     background-position: absolute;
-    background-size: 100% 100%;
+    background-size: 95% 100%;
 
     position: relative;
 
@@ -341,4 +345,195 @@ h3{
     line-height: 140%;
     margin-bottom: 24px;
     border-bottom: 1px solid #A1A1A1;
+}
+
+
+
+/*---------- Экран4 ----------*/
+.legend{
+    display:flex;
+    margin-top: calc(5.5vw + 19px);
+    gap: 20px 50px;
+    flex-wrap: wrap;
+}
+
+.ym{
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+
+.ym img{
+    /*flex-basis: 100px;*/
+    width: 100%;
+}
+.bio{
+    flex-basis: 460px;
+    flex-grow: 2;
+}
+
+.bio h3{
+    color:#222;
+    text-transform: capitalize;
+    text-align: left;
+    font-size: calc(1vw + 34px);
+}
+
+.achivs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(1vw + 26px) calc(8.8vw - 23px);
+    margin-top: calc(5.5vw + 19px);
+}
+
+.achiv span{
+    display: block;
+    margin-top: 10px;
+    font-size: calc(0.5vw + 14px);
+}
+
+
+
+/*---------- Экран7 ----------*/
+.sec7{
+    display:grid;
+    /*grid-template: 4/14;*/
+    grid-template-columns: repeat(14, 1fr);
+    gap: 20px;
+}
+.scr7h2{
+    /*width: calc(27.6vw + 224px);*/
+    margin-bottom: 20px;
+    font-size: calc(2.7vw + 24px);/*58px;*/
+    width: calc(20.6vw + 251px);
+
+    grid-row: 1/3;
+    grid-column: 7/15;
+}
+.fotodiplom{
+    width: calc(11.4vw + 284px);/*430px;*/
+    grid-row: 1/5;
+    grid-column: 1/7;
+}
+.fotodiplom img{
+    width: 100%;
+    height: 100%;
+}
+.textdiplom{
+    font-size: calc(1vw + 14px);   /*27px;*/
+    width: calc(20.6vw + 251px);/*514px;*/
+    grid-row: 3/5;
+    grid-column: 7/15;
+}
+@media(max-width:1000px){
+    .sec7{
+        display:grid;
+        /* grid-template: 4/1; */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .scr7h2{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .fotodiplom{
+        grid-row: 2/4;
+        grid-column: 1/2;
+        width: 327px;
+    }
+    .fotodiplom img{
+        width: 100%;
+        height: 100%;
+    }
+    .textdiplom{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+}
+
+/*
+.sec7{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+     gap: 20px;
+    justify-content: space-between;
+}
+
+.sec7 h2{
+    width: calc(27.6vw + 224px);
+    margin-bottom: 0;
+}
+
+.fotodiplom{
+    width: calc(22vw + 145px);
+    height: calc(7.8vw + 200px);
+}
+
+.fotodiplom img{
+    width: 100% 100%;
+}
+
+.textdiplom{
+    width: calc(27.6vw + 224px);
+}
+*/
+
+
+
+/*---------- Экран8 ----------*/
+.zp{
+    display: grid;
+    grid-template: 4/14;
+
+}
+.f1{
+    grid-row: 1/3;
+    grid-column: 2/12;
+}
+.f2{
+    grid-row: 2/4;
+    grid-column: 5/15;
+}
+.f3{
+    grid-row: 3/5;
+    grid-column: 1/11;
+}
+.zp img{
+    width: calc(57.5vw + 15px);/*750px;*/
+}
+.scr8 p{
+    font-size: calc(1vw + 14px);/*27px;*/
+    margin-bottom: calc(2.2vw + 12px);/*40px;*/
+}
+.scr8h2{
+    margin-bottom: calc(2.2vw + 12px);/*40px;*/
+}
+
+
+
+/*---------- Экран9 ----------*/
+.scr9h2{
+    margin-bottom: calc(1.1vw + 16px);/*30px;*/
+}
+.present{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+}
+.fotopresent{
+    width: calc(11vw + 359px);
+}
+
+.fotopresent img{
+    width: 100%;
+    height: 100%;
+}
+
+.word{
+    width: calc(21.2vw + 248px);
+    font-size: calc(0.3vw + 16.8px);/*21px;*/
+}
+.word div{
+    margin-bottom: calc(0.6vw + 18px);/*25px;*/
 }
