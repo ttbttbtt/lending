@@ -15,7 +15,7 @@ body{
 section{
    padding: 0 calc(10.6vw - 16px);   /*120px*/ /*слева и справа отступы*/
 
-   margin-bottom: 160px;/*calc(1.1vw + 19px);*/   /*160px;*/
+   margin-bottom: 160px;   /*calc(11vw + 19px);*/   /*160px;*/
 }
 
 .hello{
@@ -273,82 +273,6 @@ h3{
 
 
 
-/*---------- Экран5 ----------*/
-.scr5{
-    width: calc(76.7vw + 40px);   /*1022px;*/
-    font-size: calc(2.65vw + 24px);   /*58px;*/
-    font-weight: 500;
-    letter-spacing: 0.58px;
-    text-transform: uppercase;
-}
-
-.c12{
-    display: flex;
-    gap: 0 120px;
-    margin-top: 52px;
-    flex-wrap: wrap;
-}
-
-.c1{
-    width: 428px;
-    /* height: 114px; */
-    font-size: calc(1vw + 14px);   /*27px;*/
-}
-
-.naim{
-    line-height: 140%;
-    /*font-size: 27px;*/
-    font-weight: 600;
-    line-height: 140%;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.tekst{
-    /*font-size: 27px;*/
-    line-height: 140%;
-    margin-bottom: 20px;
-}
-
-
-
-/*---------- Экран6 ----------*/
-.quatro{
-    /*border: 1px solid black;*/
-    padding-left: calc(4.4vw + 9px);   /*64px;*/
-    padding-top: 80px;
-    padding-bottom: 35px;
-
-    margin-top: 0;
-    margin-bottom: 160px;
-    margin-left: calc(10.5vw - 14px);
-    
-    background-image: url('../img/frame.png');
-    background-repeat: no-repeat;
-    background-position: absolute;
-    background-size: 95% 100%;
-
-    position: relative;
-
-    /*width: calc(76.7vw + 40px);*/   /*1065px;*/
-
-}
-
-.scr6{
-    /*margin-top: 80px;*/
-    margin-bottom: 40px;
-}
-
-.lesson{
-    width: calc(71.6vw + 11px);   /*928px;*/
-    font-size: calc(0.6vw + 14px);   /*21px;*/
-    line-height: 140%;
-    margin-bottom: 24px;
-    border-bottom: 1px solid #A1A1A1;
-}
-
-
-
 /*---------- Экран4 ----------*/
 .legend{
     display:flex;
@@ -390,6 +314,93 @@ h3{
     display: block;
     margin-top: 10px;
     font-size: calc(0.5vw + 14px);
+}
+
+
+
+/*---------- Экран5 ----------*/
+.scr5{
+    width: calc(76.7vw + 40px);   /*1022px;*/
+    font-size: calc(2.65vw + 24px);   /*58px;*/
+    font-weight: 500;
+    letter-spacing: 0.58px;
+    text-transform: uppercase;
+}
+
+.c12{
+    display: flex;
+    gap: 0 120px;
+    margin-top: 52px;
+    flex-wrap: wrap;
+}
+
+.c1{
+    width: 428px;
+    /* height: 114px; */
+    font-size: calc(1vw + 14px);   /*27px;*/
+}
+
+.naim{
+    line-height: 140%;
+    /*font-size: 27px;*/
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.tekst{
+    /*font-size: 27px;*/
+    line-height: 140%;
+    margin-bottom: 20px;
+}
+    
+
+
+/*---------- Экран6 ----------*/
+.prog{
+    border: 2px solid black;
+    padding: calc(4.4vw + 23px) calc(4.9vw + 2px) calc(1.3vw + 18px);/*80px 64px 35px;*/
+    position: relative;   /* corner относительно prog-а, а не всего html по умолчанию */
+}
+#corner{
+    width: calc(8vw);
+    position: absolute;
+    /*position: fixed;*/   /* онлайн-чат - спускается вместе с тобой */
+    /*position: sticky;*/   /* липкий - ждёт тебя и потом прилепляется */
+    top: -2px;
+    right: -2px;
+}
+.lesson{
+    padding: 24px 0;
+    border-bottom: 1px solid #A1A1A1;
+}
+
+.scr6 .primary{
+    width: 424px;
+    margin-top: 34px;
+}
+
+.prog h2{
+    margin-bottom: 16px;
+}
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+@media (max-width: 700px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .lesson:nth-child(8){   /*восьмой элемент у своего родителя*/
+        border: 0;
+        padding-bottom: 0;
+    }
 }
 
 
@@ -449,6 +460,7 @@ h3{
         grid-row: 4/5;
         grid-column: 1/2;
     }
+    
 }
 
 /*
@@ -536,4 +548,76 @@ h3{
 }
 .word div{
     margin-bottom: calc(0.6vw + 18px);/*25px;*/
+}
+
+
+
+/*---------- Экран11 (как экран3) ----------*/
+
+
+
+/*---------- Экран12 ----------*/
+.hvalya{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B"
+                         "A C";
+    grid-gap: calc(1.1vw + 26px) calc(10.7vw + 40px);   /*40px 97px*/
+}
+.rez{
+    grid-area: A;
+}
+.vipusk{
+    grid-area: B;
+}
+.napr{
+    grid-area: C;
+}
+
+.rezimg{
+    margin-bottom: calc(2.2vw + 12px);/*40px;*/
+}
+.reztxt{
+    width: calc(10.8vw + 287px);/*426px;*/
+    font-size: calc(0.6vw + 20px);/*27px;*/
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+.bold{
+    /*width: calc(14.7vw + 273px);*//*461px;*/
+    font-size: calc(2.0vw + 24px);/*2.7vw*//*58px;*/
+    font-weight: 700;
+    letter-spacing: 0.58px;
+}
+.small{
+    font-size: calc(0.6vw + 14px);/*21px;*/
+    line-height: 140%;
+}
+
+@media (max-width: 1240px) {
+    .hvalya{
+        grid-template-columns: 1fr;
+        grid-template-areas: "A"
+                             "B"
+                             "C";
+}
+}
+
+
+
+/*---------- Экран13 ----------*/
+.sec13 h2 {
+    width: calc(58.2vw + 110px);/*855px;*/
+    margin-bottom: 14px;/*cal(-0.66vw + 22px);*/
+}
+.sec13 p {
+    width: calc(46.4vw + 154px);/*748px;*/
+    font-size: calc(1vw + 14px);/*27px;*/
+    line-height: 140%;
+    margin-bottom: calc(0.4vw + 18px);/*24px;*/
+}
+.sec13 img {
+    width: calc(19.8vw + 254px);/*507px;*/
+    height: calc(19.8vw + 254px);/*506px;*/
 }
